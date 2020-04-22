@@ -1,0 +1,2 @@
+export const mongodb_connection: string = 'mongodb://localhost/besafe'
+export const mongodb_options: object = {useNewUrlParser:true, useUnifiedTopology:true, useCreateIndex:true, useFindAndModify:false}

@@ -1,0 +1,37 @@
+{
+    "name": "besafe",
+    "version": "1.0.0",
+    "description": "Be Safe Backend Server",
+    "scripts": {
+        "start": "npm run dev",
+        "dev": "cross-env NODE_ENV=development nodemon",
+        "debug": "nodemon --config nodemon-debug.json",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "build": "rimraf dist && tsc && copyfiles -u 1 \"src/views/**/*\" \"dist\"",
+        "prod": "cross-env NODE_ENV=production node dist/server.js",
+        "clean": "rm -R dist node_modules package-lock.json"
+    },
+    "author": "Osama Mazi <oamazi@gmail.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/oamazi/BeSafe.git"
+    },
+    "dependencies": {
+        "fastify": "^2.13.1",
+        "mongoose": "^5.9.10",
+        "mongoose-bcrypt": "^1.6.0"
+    },
+    "devDependencies": {
+        "@types/mongoose": "^5.7.12",
+        "@types/node": "^13.13.2",
+        "copyfiles": "^2.2.0",
+        "cross-env": "^7.0.2",
+        "nodemon": "^2.0.3",
+        "prettier": "^2.0.5",
+        "rimraf": "^3.0.2",
+        "ts-node": "^8.9.0",
+        "tsconfig-paths": "^3.9.0",
+        "typescript": "^3.8.3"
+    }
+}
